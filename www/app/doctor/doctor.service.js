@@ -2,23 +2,24 @@
     'use strict';
 
     angular
-        .module('pcb.booking')
-        .factory('Booking', Booking);
+        .module('pcb.doctor')
+        .factory('Doctor', Doctor);
 
-    Booking.$inject = ['$q', '$http'];
+    Doctor.$inject = ['$q', '$http'];
 
-    function Booking($q, $http) {
+    function Doctor($q, $http) {
 
-        var apiURL = 'http://local.drupal8:8888/v1/booking/11111111111/day/2015-05-18';
+        var apiURL = 'http://local.drupal8:8888/v1/doctor';
         var config = {};
 
-        var booking = {
+        var doctor = {
             getAll: getAll
         };
 
-        return booking;
+        return doctor;
 
         ////////////////////////////////////////////////////////////////////////
+
 
 
 

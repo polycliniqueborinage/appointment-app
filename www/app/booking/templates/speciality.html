@@ -1,22 +1,14 @@
 <ion-view view-title="Nos spécialités médicales">
 
   <ion-content>
-    <div class="row">
-      <div class="col">
 
-        <ion-item class="item-icon-left item-text-wrap item-icon-right" ui-sref="tab.booking-doctor">
-          <i class="icon ion-ios7-albums-outline"></i>
+    <ion-item class="item-icon-left item-text-wrap item-icon-right" ui-sref="tab.booking-doctor">
+      <h2>Toutes</h2>
+    </ion-item>
 
-          <h2>TTT</h2>
+    <speciality-item ng-repeat="speciality in specialities">
+    </speciality-item>
 
-          <i class="icon ion-ios7-arrow-forward"></i>
-
-        </ion-item>
-
-      </div>
-      <div class="col">.col</div>
-      <div class="col">.col</div>
-    </div>
   </ion-content>
 
 </ion-view>

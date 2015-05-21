@@ -18,8 +18,7 @@
                 url: "/booking",
                 views: {
                     'tab-booking': {
-                        templateUrl: "app/booking/templates/main.html",
-                        controller: 'BookingController'
+                        templateUrl: "app/booking/templates/main.html"
                     }
                 }
             })
@@ -29,7 +28,7 @@
                 views: {
                     'tab-booking': {
                         templateUrl: "app/booking/templates/speciality.html",
-                        controller: 'BookingController'
+                        controller: 'BookingSpecialityController'
                     }
                 }
             })
@@ -39,11 +38,20 @@
                 views: {
                     'tab-booking': {
                         templateUrl: "app/booking/templates/doctor.html",
-                        controller: 'BookingController'
+                        controller: 'BookingDoctorController'
+                    }
+                }
+            })
+
+            .state('tab.booking-slot', {
+                url: '/booking/slot/:id',
+                views: {
+                    'tab-booking': {
+                        templateUrl: "app/booking/templates/slot.html",
+                        controller: 'BookingSlotController'
                     }
                 }
             });
-
     }
 
 })();
