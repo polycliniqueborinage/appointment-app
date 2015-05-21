@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('pcb.ionic')
+        .module('pcb.core')
         .config(stateConfig);
 
     stateConfig.$inject = ['$stateProvider', '$urlRouterProvider'];

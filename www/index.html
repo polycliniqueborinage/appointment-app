@@ -21,9 +21,9 @@
     <script src="app/app.module.js"></script>
 
     <script src="app/core/core.module.js"></script>
+    <script src="app/core/core.route.js"></script>
 
     <script src="app/ionic/ionic.module.js"></script>
-    <script src="app/ionic/ionic.route.js"></script>
 
     <script src="app/booking/booking.module.js"></script>
     <script src="app/booking/booking.route.js"></script>
@@ -36,8 +36,13 @@
 
   <body ng-app="pcb">
 
-    <ion-nav-bar class="bar-positive"></ion-nav-bar>
-    <ion-nav-view></ion-nav-view>
+    <ion-nav-bar class="bar-positive">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+    </ion-nav-bar>
+
+    <ion-nav-view>
+    </ion-nav-view>
 
   </body>
 

@@ -22,7 +22,28 @@
                         controller: 'BookingController'
                     }
                 }
+            })
+
+            .state('tab.booking-speciality', {
+                url: "/booking/speciality",
+                views: {
+                    'tab-booking': {
+                        templateUrl: "app/booking/templates/speciality.html",
+                        controller: 'BookingController'
+                    }
+                }
+            })
+
+            .state('tab.booking-doctor', {
+                url: "/booking/doctor",
+                views: {
+                    'tab-booking': {
+                        templateUrl: "app/booking/templates/doctor.html",
+                        controller: 'BookingController'
+                    }
+                }
             });
+
     }
 
 })();
