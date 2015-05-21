@@ -18,7 +18,8 @@
                 url: "/booking",
                 views: {
                     'tab-booking': {
-                        templateUrl: "app/booking/templates/main.html"
+                        templateUrl: "app/booking/templates/main.html",
+                        controller: 'BookingController'
                     }
                 }
             });
