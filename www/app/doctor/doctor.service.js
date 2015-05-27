@@ -13,7 +13,8 @@
         var config = {};
 
         var doctor = {
-            getAll: getAll
+            getAll: getAll,
+            getBySpeciality: getBySpeciality
         };
 
         return doctor;
@@ -22,6 +23,14 @@
 
 
 
+
+
+        function getBySpeciality (id) {
+            apiURL = 'http://local.drupal8:8888/v1/speciality/' + id + '/doctor';
+            return httpRequest().then(function (data) {
+                return data;
+            });
+        };
 
         function getAll () {
             return httpRequest().then(function (data) {

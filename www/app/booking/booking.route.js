@@ -14,6 +14,7 @@
         // Each state's controller can be found in controllers.js
         $stateProvider
 
+            // Booking.
             .state('tab.booking', {
                 url: "/booking",
                 views: {
@@ -23,6 +24,7 @@
                 }
             })
 
+            // All speciality.
             .state('tab.booking-speciality', {
                 url: "/booking/speciality",
                 views: {
@@ -33,6 +35,18 @@
                 }
             })
 
+            // All doctors by speciality.
+            .state('tab.booking-speciality-doctor', {
+                url: "/booking/doctor/:speciality",
+                views: {
+                    'tab-booking': {
+                        templateUrl: "app/booking/templates/doctor.html",
+                        controller: 'BookingDoctorController'
+                    }
+                }
+            })
+
+            // All doctors.
             .state('tab.booking-doctor', {
                 url: "/booking/doctor",
                 views: {
