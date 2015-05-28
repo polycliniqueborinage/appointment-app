@@ -15,8 +15,8 @@
         $stateProvider
 
             // Booking.
-            .state('tab.booking', {
-                url: "/booking",
+            .state('tab.bookings', {
+                url: "/bookings",
                 views: {
                     'tab-booking': {
                         templateUrl: "app/booking/templates/main.html"
@@ -25,8 +25,8 @@
             })
 
             // All speciality.
-            .state('tab.booking-speciality', {
-                url: "/booking/speciality",
+            .state('tab.bookings-specialities', {
+                url: "/bookings/specialities",
                 views: {
                     'tab-booking': {
                         templateUrl: "app/booking/templates/speciality.html",
@@ -36,8 +36,8 @@
             })
 
             // All doctors by speciality.
-            .state('tab.booking-speciality-doctor', {
-                url: "/booking/doctor/:speciality",
+            .state('tab.bookings-specialities-doctors', {
+                url: "/bookings/specialities/:speciality/doctors",
                 views: {
                     'tab-booking': {
                         templateUrl: "app/booking/templates/doctor.html",
@@ -47,8 +47,8 @@
             })
 
             // All doctors.
-            .state('tab.booking-doctor', {
-                url: "/booking/doctor",
+            .state('tab.bookings-doctors', {
+                url: "/bookings/doctors",
                 views: {
                     'tab-booking': {
                         templateUrl: "app/booking/templates/doctor.html",
@@ -57,8 +57,8 @@
                 }
             })
 
-            .state('tab.booking-slot', {
-                url: '/booking/slot/:id',
+            .state('tab.bookings-doctors-slot', {
+                url: '/bookings/slots/:id',
                 views: {
                     'tab-booking': {
                         templateUrl: "app/booking/templates/slot.html",

@@ -9,7 +9,7 @@
 
     function Doctor($q, $http) {
 
-        var apiURL = 'http://local.drupal8:8888/v1/doctor';
+        var apiURL = 'http://local.drupal8:8888/v1/doctors';
         var config = {};
 
         var doctor = {
@@ -26,7 +26,7 @@
 
 
         function getBySpeciality (id) {
-            apiURL = 'http://local.drupal8:8888/v1/speciality/' + id + '/doctor';
+            apiURL = 'http://local.drupal8:8888/v1/specialities/' + id + '/doctors';
             return httpRequest().then(function (data) {
                 return data;
             });
