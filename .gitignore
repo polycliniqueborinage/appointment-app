@@ -5,4 +5,4 @@ plugins/
 .DS_Store
 .idea/
 
-www/lib
+www/lib/ionic

@@ -21,3 +21,20 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+.speciality-logo {
+  color: red;
+  align-content: center;
+}
+
+.speciality-logo__icon {
+  font-size: 3em;
+  width: 100%;
+  display: block;
+}
+
+.speciality-logo__label {
+  font-size: 1em;
+  width: 100%;
+}
+
+
