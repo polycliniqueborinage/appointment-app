@@ -57,8 +57,9 @@
                 }
             })
 
-            .state('tab.bookings-doctors-slot', {
-                url: '/bookings/slots/:id',
+            // All slot.
+            .state('tab.bookings-doctors-slots', {
+                url: '/bookings/doctors/:doctor/slots/',
                 views: {
                     'tab-booking': {
                         templateUrl: "app/booking/templates/slot.html",
