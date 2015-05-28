@@ -14,34 +14,15 @@ $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
-
-// The path for our ionicons font files, relative to the built CSS in www/css
-//$ionicons-font-path: "../lib/ionic/fonts" !default;
-
-// Include all of Ionic
-//@import "www/lib/ionic/scss/ionic";
-
-// http://samcome.github.io/webfont-medical-icons/
-
-// Variables.
-$green:#7E9B95;
-
-
-// Speciality Logo.
 .speciality-logo {
-  text-align: center;
-
-  .speciality-logo__icon {
+  text-align: center; }
+  .speciality-logo .speciality-logo__icon {
     font-size: 3em;
     width: 100%;
     display: block;
     margin: 0 auto;
-    color: $green;
-  }
-
-  .speciality-logo__label {
+    color: #7E9B95; }
+  .speciality-logo .speciality-logo__label {
     font-size: 1em;
     width: 100%;
-    color: $green;
-  }
-}
+    color: #7E9B95; }

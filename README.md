@@ -2,6 +2,7 @@
 
 ## Prepare
 ```
+   $ npm install
    $ bower update
    $ cordova add ios
 ```

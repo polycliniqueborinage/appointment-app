@@ -9,7 +9,7 @@
 
     function Speciality($q, $http) {
 
-        var apiURL = 'http://local.drupal8:8888/v1/speciality';
+        var apiURL = 'http://local.drupal8:8888/v1/specialities';
         var config = {};
 
         var speciality = {
