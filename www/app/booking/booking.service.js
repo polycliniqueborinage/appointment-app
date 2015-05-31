@@ -5,9 +5,9 @@
         .module('pcb.booking')
         .factory('Booking', Booking);
 
-    Booking.$inject = ['$q', '$http'];
+    Booking.$inject = ['$q', '$http', 'Dataservice'];
 
-    function Booking($q, $http) {
+    function Booking($q, $http, Dataservice) {
 
         var apiURL = '';
         var config = {};
@@ -28,8 +28,9 @@
 
         function getAvailableSlotsByMonth (id, date) {
             var events = [];
-            apiURL = 'http://local.drupal8:8888/index_dev.php/v1/doctors/' + id + '/bookings/' + date + '?interval=month';
-            return httpRequest().then(function (data) {
+            apiURL = '/doctors/' + id + '/bookings/' + date + '?interval=month';
+
+            return Dataservice.get(apiURL, config).then(function (data) {
                 data.forEach(function( value ) {
                     events.push({
                         title: 'Event',
@@ -43,23 +44,10 @@
         };
 
         function getAvailableSlotsByDay (id, date) {
-            apiURL = 'http://local.drupal8:8888/index_dev.php/v1/doctors/' + id + '/bookings/' + date + '?interval=day';
-            return httpRequest().then(function (data) {
+            apiURL = '/doctors/' + id + '/bookings/' + date + '?interval=day';
+            return Dataservice.get(apiURL, config).then(function (data) {
                 return data;
             });
-        };
-
-        function httpRequest () {
-            return $http.get(apiURL, config)
-                .then(httpRequestSuccess, httpRequestError);
-        };
-
-        function httpRequestSuccess (response) {
-            return response.data;
-        };
-
-        function httpRequestError () {
-            return FALSE;
         };
 
     }

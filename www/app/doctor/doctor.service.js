@@ -5,11 +5,11 @@
         .module('pcb.doctor')
         .factory('Doctor', Doctor);
 
-    Doctor.$inject = ['$q', '$http'];
+    Doctor.$inject = ['$q', '$http', 'Dataservice'];
 
-    function Doctor($q, $http) {
+    function Doctor($q, $http, Dataservice) {
 
-        var apiURL = 'http://local.drupal8:8888/v1/doctors';
+        var apiURL = '/doctors';
         var config = {};
 
         var doctor = {
@@ -25,30 +25,20 @@
 
 
 
+
+
+
         function getBySpeciality (id) {
-            apiURL = 'http://local.drupal8:8888/v1/specialities/' + id + '/doctors';
-            return httpRequest().then(function (data) {
+            apiURL = '/specialities/' + id + '/doctors';
+            return Dataservice.get(apiURL, config).then(function (data) {
                 return data;
             });
         };
 
         function getAll () {
-            return httpRequest().then(function (data) {
+            return Dataservice.get(apiURL, config).then(function (data) {
                 return data;
             });
-        };
-
-        function httpRequest () {
-            return $http.get(apiURL, config)
-                .then(httpRequestSuccess, httpRequestError);
-        };
-
-        function httpRequestSuccess (response) {
-            return response.data;
-        };
-
-        function httpRequestError () {
-            return FALSE;
         };
 
     }

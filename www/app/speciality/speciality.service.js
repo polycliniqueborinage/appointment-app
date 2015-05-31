@@ -5,11 +5,11 @@
         .module('pcb.speciality')
         .factory('Speciality', Speciality);
 
-    Speciality.$inject = ['$q', '$http'];
+    Speciality.$inject = ['$q', '$http', 'Dataservice'];
 
-    function Speciality($q, $http) {
+    function Speciality($q, $http, Dataservice) {
 
-        var apiURL = 'http://local.drupal8:8888/v1/specialities';
+        var apiURL = '/specialities';
         var config = {};
 
         var speciality = {
@@ -17,28 +17,19 @@
         };
 
         return speciality;
+
         ////////////////////////////////////////////////////////////////////////
 
 
 
 
+
+
+
         function getAll () {
-            return httpRequest().then(function (data) {
+            return Dataservice.get(apiURL, config).then(function (data) {
                 return data;
             });
-        };
-
-        function httpRequest () {
-            return $http.get(apiURL, config)
-                .then(httpRequestSuccess, httpRequestError);
-        };
-
-        function httpRequestSuccess (response) {
-            return response.data;
-        };
-
-        function httpRequestError () {
-            return FALSE;
         };
 
     }

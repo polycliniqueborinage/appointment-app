@@ -5,32 +5,34 @@
         .module('pcb.core')
         .factory('Dataservice', Dataservice);
 
-    Dataservice.$inject = ['$http', '$q', 'logger'];
+    Dataservice.$inject = ['$http', '$q', 'API'];
 
-    function Dataservice($http, $q, logger) {
+    function Dataservice($http, $q, API) {
         var service = {
-            getPeople: getPeople,
-            getMessageCount: getMessageCount
+            get: getHttpRequest
         };
 
         return service;
+        ////////////////////////////////////////////////////////////////////////
 
-        function getMessageCount() { return $q.when(72); }
 
-        function getPeople() {
-            return $http.get('/api/people')
-                .then(success)
-                .catch(fail);
 
-            function success(response) {
-                return response.data;
-            }
 
-            function fail(error) {
-                var msg = 'query for people failed. ' + error.data.description;
-                logger.error(msg);
-                return $q.reject(msg);
-            }
+
+        function getHttpRequest(apiURL, config) {
+            return $http.get(API.url + apiURL)
+                .then(httpRequestSuccess)
+                .catch(httpRequestError);
+        };
+
+        function httpRequestSuccess(response) {
+            return response.data;
+        }
+
+        function httpRequestError(error) {
+            var msg = 'query for people failed. ' + error.data.description;
+            console.log(msg);
+            return $q.reject(msg);
         }
     }
 })();
