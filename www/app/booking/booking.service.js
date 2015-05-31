@@ -9,11 +9,12 @@
 
     function Booking($q, $http) {
 
-        var apiURL = 'http://local.drupal8:8888/index_dev.php/v1/doctors/2/bookings/2015-05-18?interval=1';
+        var apiURL = '';
         var config = {};
 
         var booking = {
-            getAll: getAll
+            getAvailableSlotsByDay: getAvailableSlotsByDay,
+            getAvailableSlotsByMonth: getAvailableSlotsByMonth
         };
 
         return booking;
@@ -22,7 +23,27 @@
 
 
 
-        function getAll () {
+
+
+
+        function getAvailableSlotsByMonth (id, date) {
+            var events = [];
+            apiURL = 'http://local.drupal8:8888/index_dev.php/v1/doctors/' + id + '/bookings/' + date + '?interval=month';
+            return httpRequest().then(function (data) {
+                data.forEach(function( value ) {
+                    events.push({
+                        title: 'Event',
+                        startTime: new Date(value.start.date),
+                        endTime: new Date(value.end.date),
+                        allDay: false
+                    });
+                });
+                return events;
+            });
+        };
+
+        function getAvailableSlotsByDay (id, date) {
+            apiURL = 'http://local.drupal8:8888/index_dev.php/v1/doctors/' + id + '/bookings/' + date + '?interval=day';
             return httpRequest().then(function (data) {
                 return data;
             });

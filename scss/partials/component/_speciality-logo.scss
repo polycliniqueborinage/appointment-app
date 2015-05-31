@@ -1,0 +1,22 @@
+/**
+ * @file
+ * Speciality Logo.
+ */
+
+.speciality-logo {
+  text-align: center;
+
+  .speciality-logo__icon {
+    font-size: 3em;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    color: $green;
+  }
+
+  .speciality-logo__label {
+    font-size: 1em;
+    width: 100%;
+    color: $green;
+  }
+}

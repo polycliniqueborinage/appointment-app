@@ -15,6 +15,7 @@
          * 3rd Party modules
          */
         'ionic',
+        'ui.rCalendar'
     ]);
 
 })();

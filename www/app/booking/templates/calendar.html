@@ -1,0 +1,14 @@
+<ion-view view-title="Disponibilite">
+  <ion-content>
+
+    <calendar ng-model="currentDate" calendar-mode="month" event-source="eventSource"
+              range-changed="reloadSource(startTime, endTime)"
+              event-selected="onEventSelected(event)"
+              time-selected="onTimeSelected(selectedTime)">
+    </calendar>
+
+    <slot-item ng-repeat="slot in slots">
+    </slot-item>
+
+  </ion-content>
+</ion-view>

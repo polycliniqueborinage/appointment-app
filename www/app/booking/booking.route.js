@@ -57,13 +57,13 @@
                 }
             })
 
-            // All slot availabel per day.
-            .state('tab.bookings-doctors-slots', {
-                url: '/bookings/doctors/:doctor/slots/',
+            // All slots available per day.
+            .state('tab.bookings-doctors-calendars', {
+                url: '/bookings/doctors/:doctor/calendars/',
                 views: {
                     'tab-booking': {
-                        templateUrl: "app/booking/templates/slot.html",
-                        controller: 'BookingSlotController'
+                        templateUrl: "app/booking/templates/calendar.html",
+                        controller: 'BookingCalendarController'
                     }
                 }
             })
