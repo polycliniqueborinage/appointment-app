@@ -9,7 +9,7 @@
 
     function Booking($q, $http) {
 
-        var apiURL = 'http://local.drupal8:8888/v1/booking/11111111111/day/2015-05-18';
+        var apiURL = 'http://local.drupal8:8888/index_dev.php/v1/doctors/2/bookings/2015-05-18?interval=1';
         var config = {};
 
         var booking = {
