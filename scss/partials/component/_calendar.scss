@@ -1,8 +1,56 @@
 /**
  * @file
  * Calendar.
+ * http://twinssbc.github.io/AngularJS-ResponsiveCalendar/demo/
  */
 
+.calendar {
+  .calendar-navbar {
+    background-color: $green;
+    .nav-left {
+      text-align: left;
+      width: 16.666666666666664%;
+    }
+    .calendar-header {
+      text-align: center;
+      padding-top: 5px;
+      width: 66.66666666666666%;
+    }
+    .nav-right {
+      text-align: right;
+      width: 16.666666666666664%;
+    }
+  }
+
+  .table-bordered {
+    border: 1px solid #ddd;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+    padding: 8px;
+    line-height: 1.428571429;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+  }
+
+  .monthview-primary-with-event {
+    background-color: #3a87ad;
+    color: white;
+  }
+
+  .monthview-selected {
+    color: red;
+  }
+
+
+}
+
+
+
+
+/*
 .nav-left {
   text-align: left;
 }
@@ -158,3 +206,4 @@
     font-size: 12px;
   }
 }
+*/

@@ -8,8 +8,8 @@ angular.module('ui.rCalendar', ['ui.rCalendar.tpls'])
         formatMonthTitle: 'MMMM yyyy',
         calendarMode: 'month',
         showWeeks: false,
-        showEventDetail: true,
-        startingDay: 0,
+        showEventDetail: false,
+        startingDay: 1,
         eventSource: null,
         queryMode: 'local'
     })
@@ -336,9 +336,13 @@ angular.module('ui.rCalendar', ['ui.rCalendar.tpls'])
                     }
 
                     scope.labels = new Array(7);
-                    for (var j = 0; j < 7; j++) {
-                        scope.labels[j] = dateFilter(days[j].date, ctrl.formatDayHeader);
-                    }
+                    scope.labels[0] = 'Lun';
+                    scope.labels[1] = 'Mar';
+                    scope.labels[2] = 'Mer';
+                    scope.labels[3] = 'Jeu';
+                    scope.labels[4] = 'Ven';
+                    scope.labels[5] = 'Sam';
+                    scope.labels[6] = 'Dim';
 
                     var headerDate = new Date(year, month, 1);
                     scope.$parent.title = dateFilter(headerDate, ctrl.formatMonthTitle);
@@ -935,7 +939,7 @@ angular.module('ui.rCalendar', ['ui.rCalendar.tpls'])
     }]);
 angular.module("template/rcalendar/calendar.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("template/rcalendar/calendar.html",
-    "<div ng-switch=\"calendarMode\">\n" +
+    "<div ng-switch=\"calendarMode\" class=\"calendar\">\n" +
     "    <div class=\"row calendar-navbar\">\n" +
     "        <div class=\"nav-left col-xs-2\">\n" +
     "            <button type=\"button\" class=\"btn btn-default btn-sm\" ng-click=\"move(-1)\"><i\n" +
