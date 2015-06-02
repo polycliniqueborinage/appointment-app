@@ -2,8 +2,7 @@
   <ion-content>
 
     <calendar ng-model="currentDate" calendar-mode="month" event-source="eventSource"
-              range-changed="reloadSource(startTime, endTime)"
-              event-selected="onEventSelected(event)"
+              range-changed="onRangeChanged(startTime, endTime)"
               time-selected="onTimeSelected(selectedTime)">
     </calendar>
 

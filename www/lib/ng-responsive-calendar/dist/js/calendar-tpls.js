@@ -11,7 +11,7 @@ angular.module('ui.rCalendar', ['ui.rCalendar.tpls'])
         showEventDetail: false,
         startingDay: 1,
         eventSource: null,
-        queryMode: 'local'
+        queryMode: 'remote'
     })
     .controller('CalendarController', ['$scope', '$attrs', '$parse', '$interpolate', '$log', 'dateFilter', 'calendarConfig', function ($scope, $attrs, $parse, $interpolate, $log, dateFilter, calendarConfig) {
         'use strict';
@@ -1022,7 +1022,7 @@ angular.module("template/rcalendar/month.html", []).run(["$templateCache", funct
     "                <small><em>{{ weekNumbers[$index] }}</em></small>\n" +
     "            </td>\n" +
     "            <td ng-repeat=\"dt in row track by dt.date\" class=\"monthview-dateCell\" ng-click=\"select(dt.date)\"\n" +
-    "                ng-class=\"{'text-center':true, 'monthview-current': dt.current&&!dt.selected&&!dt.hasEvent,'monthview-secondary-with-event': dt.secondary&&dt.hasEvent, 'monthview-primary-with-event':!dt.secondary&&dt.hasEvent&&!dt.selected, 'monthview-selected': dt.selected}\">\n" +
+    "                ng-class=\"{'text-center':true, 'monthview-current': dt.current&&!dt.selected&&!dt.hasEvent,'monthview-secondary-with-event': dt.secondary&&dt.hasEvent, 'monthview-primary-with-event':!dt.secondary&&dt.hasEvent, 'monthview-selected': dt.selected}\">\n" +
     "                <div ng-class=\"{'text-muted':dt.secondary}\">\n" +
     "                    {{dt.label}}\n" +
     "                </div>\n" +

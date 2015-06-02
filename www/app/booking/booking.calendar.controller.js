@@ -11,16 +11,16 @@
 
         $scope.slots = [];
 
-        $scope.rangeChanged = function (startTime, endTime) {
-            console.log('rangeChanged');
-        };
-
-        $scope.onEventSelected = function (event) {
-            console.log('onEventSelected');
+        $scope.onRangeChanged = function (startTime, endTime) {
+            $scope.startDate = moment(startTime).format('YYYY-MM-DD');
+            $scope.endDate = moment(endTime).format('YYYY-MM-DD');
+            $scope.centerDate = moment(startTime).add(14, 'days').format('YYYY-MM-DD');
+            getAvailableSlotsByMonth($scope.centerDate);
         };
 
         $scope.onTimeSelected = function (selectedTime) {
-            getAvailableSlotsByDay(moment(new Date(selectedTime)).format('YYYY-MM-DD'));
+            $scope.selectedDate = moment(selectedTime).format('YYYY-MM-DD');
+            getAvailableSlotsByDay($scope.selectedDate);
         };
 
         activate();
@@ -33,10 +33,6 @@
 
 
         function activate() {
-            $scope.doctor = $state.params.doctor;
-            $scope.currentDate = moment(new Date()).format('YYYY-MM-DD');
-
-            getAvailableSlotsByMonth($scope.currentDate);
         }
 
         function getAvailableSlotsByDay(date) {
