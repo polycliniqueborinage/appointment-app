@@ -44,9 +44,19 @@
         };
 
         function getAvailableSlotsByDay (id, date) {
+            var events = [];
+
             apiURL = '/doctors/' + id + '/bookings/' + date + '?interval=day';
             return Dataservice.get(apiURL, config).then(function (data) {
-                return data;
+                data.forEach(function( value ) {
+                    events.push({
+                        title: 'Event',
+                        startTime: new Date(value.carbon_start.date),
+                        endTime: new Date(value.carbon_end.date),
+                        allDay: false
+                    });
+                });
+                return events;
             });
         };
 
