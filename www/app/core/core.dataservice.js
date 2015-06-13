@@ -19,6 +19,9 @@
 
 
 
+
+        // Post.
+
         function getHttpRequest(apiURL, config) {
             return $http.get(API.url + apiURL)
                 .then(httpRequestSuccess)
@@ -30,8 +33,7 @@
         }
 
         function httpRequestError(error) {
-            var msg = 'query for people failed. ' + error.data.description;
-            console.log(msg);
+            var msg = 'query failed. ' + error.data.description;
             return $q.reject(msg);
         }
     }

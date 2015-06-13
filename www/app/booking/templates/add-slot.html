@@ -1,6 +1,8 @@
-<!-- http://www.gajotres.net/ionic-framework-tutorial-10-form-handling-and-validation/ -->
 <ion-view view-title="Reserver un slot">
   <ion-content>
+    <h2>{{doctor.familyname}} {{doctor.firstname}}</h2>
+    <h3>{{start | date:'dd MMMM'}}</h3>
+    <h4>{{start | date:'HH:mm'}} - {{end | date:'HH:mm'}}</h4>
     <div class="list">
       <label class="item item-input item-floating-label">
         <span class="input-label">Prénom</span>

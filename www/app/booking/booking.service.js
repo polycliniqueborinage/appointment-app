@@ -51,8 +51,8 @@
                 data.forEach(function( value ) {
                     events.push({
                         title: 'Event',
-                        startTime: new Date(value.carbon_start.date),
-                        endTime: new Date(value.carbon_end.date),
+                        startTime: new Date(value.start.date),
+                        endTime: new Date(value.end.date),
                         allDay: false
                     });
                 });

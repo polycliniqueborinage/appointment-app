@@ -23,7 +23,6 @@
             getAvailableSlotsByDay($scope.selectedDate);
         };
 
-        activate();
         ////////////////////////////////////////////////////////////////////////
 
 
@@ -31,9 +30,6 @@
 
 
 
-
-        function activate() {
-        }
 
         function getAvailableSlotsByDay(date) {
             $scope.doctor = $state.params.doctor;

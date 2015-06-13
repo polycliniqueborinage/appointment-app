@@ -70,10 +70,11 @@
 
             // Add slot.
             .state('tab.bookings-doctors-slots-add', {
-                url: '/bookings/doctors/:doctor/slots/add',
+                url: '/bookings/doctors/:doctor/slots/add?start&end',
                 views: {
                     'tab-booking': {
-                        templateUrl: "app/booking/templates/add-slot.html"
+                        templateUrl: "app/booking/templates/add-slot.html",
+                        controller: 'BookingAddController'
                     }
                 }
             });

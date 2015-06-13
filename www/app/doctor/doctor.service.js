@@ -13,6 +13,7 @@
         var config = {};
 
         var doctor = {
+            get: get,
             getAll: getAll,
             getBySpeciality: getBySpeciality
         };
@@ -41,6 +42,12 @@
             });
         };
 
+        function get (id) {
+            apiURL = '/doctors/' + id ;
+            return Dataservice.get(apiURL, config).then(function (data) {
+                return data;
+            });
+        };
     }
 
 })();
