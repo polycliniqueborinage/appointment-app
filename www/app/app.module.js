@@ -7,7 +7,8 @@
         'pcb.speciality',
         'pcb.booking',
         'pcb.dashboard',
-        'pcb.doctor'
+        'pcb.doctor',
+        'pcb.user'
     ]);
 
 })();

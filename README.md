@@ -29,6 +29,10 @@ https://stormpath.com/blog/token-auth-spa/
 https://github.com/keithdmoore/ionic-http-auth
 https://github.com/driftyco/ionic-site/blob/master/_posts/2014-08-25-authentication-in-ionic.markdown
 
+http://www.sitepoint.com/php-authorization-jwt-json-web-tokens/
+http://www.toptal.com/web/cookie-free-authentication-with-json-web-tokens-an-example-in-laravel-and-angularjs
+
+https://github.com/lynndylanhurley/ng-token-auth#authauthenticate
 
 ### Deployment
 http://alexbergin.com/2015/creating-publishing-hybrid-apps-ionic

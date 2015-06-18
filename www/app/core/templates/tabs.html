@@ -1,8 +1,51 @@
-<ion-tabs class="tabs-icon-top tabs-color-active-positive">
-  <ion-tab title="Dashboard" icon-off="ion-ios-home-outline" icon-on="ion-ios-home" ui-sref="tab.dasboard">
-    <ion-nav-view name="tab-dashboard"></ion-nav-view>
-  </ion-tab>
-  <ion-tab title="Rendez-vous" icon-off="ion-ios-calendar-outline" icon-on="ion-ios-calendar" ui-sref="tab.bookings">
-    <ion-nav-view name="tab-booking"></ion-nav-view>
-  </ion-tab>
-</ion-tabs>
+<ion-side-menus enable-menu-with-back-views="false">
+
+  <ion-side-menu-content>
+
+    <ion-nav-bar class="bar-positive">
+
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+
+      <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-log-in" ng-click="login()">
+          Login
+        </button>
+      </ion-nav-buttons>
+
+    </ion-nav-bar>
+
+    <ion-tabs class="tabs-icon-top tabs-color-active-positive">
+      <ion-tab title="Dashboard" icon-off="ion-ios-home-outline" icon-on="ion-ios-home" ui-sref="tab.dasboard">
+        <ion-nav-view name="tab-dashboard"></ion-nav-view>
+      </ion-tab>
+      <ion-tab title="Rendez-vous" icon-off="ion-ios-calendar-outline" icon-on="ion-ios-calendar" ui-sref="tab.bookings">
+        <ion-nav-view name="tab-booking"></ion-nav-view>
+      </ion-tab>
+    </ion-tabs>
+
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar-stable">
+      <h1 class="title">Menu</h1>
+    </ion-header-bar>
+    <ion-content>
+      <ion-list>
+        <ion-item menu-close ng-click="login()">
+          Login
+        </ion-item>
+        <ion-item menu-close href="#/polyclinique/about">
+          Votre polyclinique
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+
+</ion-side-menus>
+

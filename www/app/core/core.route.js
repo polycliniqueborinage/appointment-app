@@ -14,7 +14,8 @@
             .state('tab', {
                 url: "/tab",
                 abstract: true,
-                templateUrl: "app/core/templates/tabs.html"
+                templateUrl: "app/core/templates/tabs.html",
+                controller: 'UserController'
             });
 
         // If none of the above states are matched, use this as the fallback

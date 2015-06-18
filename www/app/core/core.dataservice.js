@@ -9,18 +9,21 @@
 
     function Dataservice($http, $q, API) {
         var service = {
-            get: getHttpRequest
+            get: getHttpRequest,
+            post: postHttpRequest
         };
 
         return service;
         ////////////////////////////////////////////////////////////////////////
 
 
-
-
-
-
-        // Post.
+        function postHttpRequest(apiURL, config) {
+            console.log(apiURL);
+            console.log(config);
+            return $http.post(API.url + apiURL, config)
+                .then(httpRequestSuccess)
+                .catch(httpRequestError);
+        };
 
         function getHttpRequest(apiURL, config) {
             return $http.get(API.url + apiURL)
