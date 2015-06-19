@@ -12,10 +12,16 @@
 
   <!-- ionic/angularjs js -->
   <script src="lib/ionic/js/ionic.bundle.js"></script>
+
   <script src="lib/moment/moment.js"></script>
+
   <script src="lib/ng-responsive-calendar/dist/js/calendar-tpls.js"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.2.15/angular-locale_fr-be.js"></script>
 
+  <!-- ngCordova -->
+  <!-- IMPORTANT : SHOULD be after ionic bundle and before cordova.js -->
+  <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
 
   <!-- cordova script (this will be a 404 during development) -->
   <script src="cordova.js"></script>
@@ -49,11 +55,16 @@
 
   <script src="app/dashboard/dashboard.module.js"></script>
   <script src="app/dashboard/dashboard.route.js"></script>
+  <script src="app/dashboard/dashboard.controller.js"></script>
 
   <script src="app/user/user.module.js"></script>
   <script src="app/user/user.service.js"></script>
   <script src="app/user/user.route.js"></script>
   <script src="app/user/user.controller.js"></script>
+
+  <script src="app/polyclinique/polyclinique.module.js"></script>
+  <script src="app/polyclinique/polyclinique.route.js"></script>
+  <script src="app/polyclinique/polyclinique.controller.js"></script>
 </head>
 
 <body ng-app="pcb">

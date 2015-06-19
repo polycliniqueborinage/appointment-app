@@ -5,12 +5,15 @@
    $ npm install
    $ bower update
    $ cordova add ios
+   $ cordova plugin add org.apache.cordova.device
+   $ cordova plugin add cordova-plugin-vibration
 ```
 
 ## Run
 ```
    $ ionic serve
    $ ionic run
+   $ ionic run ios -l -c -s
    $ ionic build
 ```
 
@@ -36,3 +39,10 @@ https://github.com/lynndylanhurley/ng-token-auth#authauthenticate
 
 ### Deployment
 http://alexbergin.com/2015/creating-publishing-hybrid-apps-ionic
+
+
+### Manage cors issue with POST
+http://stackoverflow.com/questions/26818843/how-to-post-json-data-to-rest-webservice-in-angularjs
+
+### ngCordova
+http://thejackalofjavascript.com/getting-started-with-ngcordova/

@@ -18,8 +18,7 @@
 
 
         function postHttpRequest(apiURL, config) {
-            console.log(apiURL);
-            console.log(config);
+            $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
             return $http.post(API.url + apiURL, config)
                 .then(httpRequestSuccess)
                 .catch(httpRequestError);

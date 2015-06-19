@@ -8,7 +8,8 @@
         'pcb.booking',
         'pcb.dashboard',
         'pcb.doctor',
-        'pcb.user'
+        'pcb.user',
+        'pcb.polyclinique'
     ]);
 
 })();

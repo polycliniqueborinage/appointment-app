@@ -5,9 +5,9 @@
         .module('pcb.user')
         .controller('UserController', UserController);
 
-    UserController.$inject = ['$scope', '$ionicModal', '$timeout', 'User'];
+    UserController.$inject = ['$scope', '$ionicModal', '$ionicPlatform', '$cordovaVibration', 'User'];
 
-    function UserController($scope, $ionicModal, $timeout, User) {
+    function UserController($scope, $ionicModal, $ionicPlatform, $cordovaVibration, User) {
 
         $scope.loginData = {};
 
@@ -19,7 +19,17 @@
         ////////////////////////////////////////////////////////////////////////
 
 
+
+
+
+
+
         function login() {
+            $ionicPlatform.ready(function() {
+                $scope.vibrateDevice = function() {
+                    $cordovaVibration.vibrate(100);
+                }
+            });
             $scope.modal.show();
         }
 
@@ -31,7 +41,6 @@
             console.log($scope.loginData);
             User.authenticate($scope.loginData).then(function (data) {
                 console.log(data);
-                $scope.modal.hide();
             });
         }
 
@@ -42,6 +51,14 @@
             }).then(function(modal) {
                 $scope.modal = modal;
             });
+        }
+
+        function success() {
+            console.log("success");
+        }
+
+        function error() {
+            console.log("error");
         }
     }
 

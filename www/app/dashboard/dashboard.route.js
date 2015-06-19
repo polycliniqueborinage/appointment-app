@@ -18,7 +18,8 @@
                 url: "/dashboard",
                 views: {
                     'tab-dashboard': {
-                        templateUrl: "app/dashboard/templates/main.html"
+                        templateUrl: "app/dashboard/templates/main.html",
+                        controller: 'DashboardController'
                     }
                 }
             });
