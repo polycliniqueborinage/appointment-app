@@ -1,0 +1,10 @@
+<div class="list card">
+  <div class="item">
+    <h2><i class="speciality-logo__icon {{ service.icon }}"></i> {{ service.value }}</h2>
+  </div>
+  <ion-item ng-repeat="doctor in service.doctors" class="item-icon-left" ng-click="">
+    <i class="icon ion-person placeholder-icon"></i>
+    {{ doctor.firstname }}
+    {{ doctor.familyname }}
+  </ion-item>
+</div>

@@ -9,7 +9,8 @@
         'pcb.dashboard',
         'pcb.doctor',
         'pcb.user',
-        'pcb.polyclinique'
+        'pcb.polyclinique',
+        'pcb.calendar'
     ]);
 
 })();

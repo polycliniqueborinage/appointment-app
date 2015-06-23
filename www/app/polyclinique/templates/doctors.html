@@ -1,0 +1,10 @@
+<ion-view view-title="Nos specialistes">
+  <ion-content>
+
+    <ion-item ng-repeat="doctor in doctors" class="item-icon-left item-text-wrap item-icon-right" ui-sref="tab.polyclinique-doctor({ doctor: {{doctor.id}} })">
+      <h2>{{doctor.firstname}} {{doctor.familyname}}</h2>
+      {{ doctor.service.value }}
+    </ion-item>
+
+  </ion-content>
+</ion-view>

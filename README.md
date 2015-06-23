@@ -7,6 +7,15 @@
    $ cordova add ios
    $ cordova plugin add org.apache.cordova.device
    $ cordova plugin add cordova-plugin-vibration
+   $ cordova plugin add cordova-plugin-camera
+   $ cordova plugin add cordova-plugin-battery-status
+   $ cordova plugin add de.appplant.cordova.plugin.local-notification
+   $ cordova plugin add https://github.com/litehelpers/Cordova-sqlite-storage.git
+   $ cordova plugin add https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin.git
+   $ cordova plugin add https://github.com/Paldom/PinDialog.git
+   $ cordova plugin add https://github.com/EddyVerbruggen/Calendar-PhoneGap-Plugin.git
+   $ cordova plugin add cordova-plugin-device-motion
+   $ cordova plugin add cordova-plugin-network-information
 ```
 
 ## Run
@@ -46,3 +55,12 @@ http://stackoverflow.com/questions/26818843/how-to-post-json-data-to-rest-webser
 
 ### ngCordova
 http://thejackalofjavascript.com/getting-started-with-ngcordova/
+
+
+### push notification
+https://github.com/hollyschinsky/PushNotificationSample
+
+
+### More resources
+https://github.com/Alexintosh/Awesome-Ionic
+https://github.com/juarezpaf/ionic-adventures

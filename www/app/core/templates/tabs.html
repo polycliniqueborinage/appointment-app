@@ -14,14 +14,16 @@
 
       <ion-nav-buttons side="right">
         <button class="button button-icon button-clear ion-log-in" ng-click="login()">
-          Login
         </button>
       </ion-nav-buttons>
 
     </ion-nav-bar>
 
     <ion-tabs class="tabs-icon-top tabs-color-active-positive">
-      <ion-tab title="Dashboard" icon-off="ion-ios-home-outline" icon-on="ion-ios-home" ui-sref="tab.dasboard">
+      <ion-tab title="Polyclinique" icon-off="ion-ios-home-outline" icon-on="ion-ios-home" ui-sref="tab.polyclinique">
+        <ion-nav-view name="tab-polyclinique"></ion-nav-view>
+      </ion-tab>
+      <ion-tab title="Dashboard" icon-off="ion-ios-pulse-strong" icon-on="ion-ios-pulse-strong" ui-sref="tab.dasboard">
         <ion-nav-view name="tab-dashboard"></ion-nav-view>
       </ion-tab>
       <ion-tab title="Rendez-vous" icon-off="ion-ios-calendar-outline" icon-on="ion-ios-calendar" ui-sref="tab.bookings">
@@ -36,45 +38,51 @@
       <h1 class="title">Menu</h1>
     </ion-header-bar>
     <ion-content>
-
-
       <ion-list>
+        <ion-item nav-clear menu-close ui-sref="tab.polyclinique-services">
+          Services
+        </ion-item>
+        <ion-item nav-clear menu-close ui-sref="tab.polyclinique-doctors">
+          Spécialistes
+        </ion-item>
+
         <ion-item menu-close ng-click="login()">
           Login
         </ion-item>
-        <ion-item nav-clear menu-close href="#/polyclinique/device">
+
+        <!--ion-item nav-clear menu-close ui-sref="tab.polyclinique-device">
           Device
         </ion-item>
-        <ion-item nav-clear menu-close href="#/polyclinique/battery">
+        <ion-item nav-clear menu-close ui-sref="tab.polyclinique-battery">
           Battery
         </ion-item>
-        <ion-item nav-clear menu-close href="#/polyclinique/camera">
+        <ion-item nav-clear menu-close ui-sref="tab.polyclinique-camera">
           Camera
         </ion-item>
-        <ion-item nav-clear menu-close href="#/polyclinique/motion">
+        <ion-item nav-clear menu-close ui-sref="tab.polyclinique-motion">
           Device Motion
         </ion-item>
-        <ion-item nav-clear menu-close href="#/polyclinique/notifications">
+        <ion-item nav-clear menu-close ui-sref="tab.polyclinique-notifications">
           Notifications
         </ion-item>
-        <ion-item nav-clear menu-close href="#/polyclinique/network">
+        <ion-item nav-clear menu-close ui-sref="tab.polyclinique-network">
           Network
         </ion-item>
-        <ion-item nav-clear menu-close href="#/polyclinique/pin">
+        <ion-item nav-clear menu-close ui-sref="tab.polyclinique-pin">
           Pin Dialog
         </ion-item>
-        <ion-item nav-clear menu-close href="#/polyclinique/share">
+        <ion-item nav-clear menu-close ui-sref="tab.polyclinique-share">
           Social Sharing
         </ion-item>
-        <ion-item nav-clear menu-close href="#/polyclinique/sqlite">
+        <ion-item nav-clear menu-close ui-sref="tab.polyclinique-sqlite">
           SQLite
         </ion-item>
-        <ion-item nav-clear menu-close href="#/polyclinique/toast">
+        <ion-item nav-clear menu-close ui-sref="tab.polyclinique-toast">
           Toast
         </ion-item>
-        <ion-item nav-clear menu-close href="#/polyclinique/vibrate">
+        <ion-item nav-clear menu-close ui-sref="tab.polyclinique-vibrate">
           Vibrate
-        </ion-item>
+        </ion-item-->
       </ion-list>
     </ion-content>
   </ion-side-menu>

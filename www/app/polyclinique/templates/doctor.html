@@ -1,0 +1,18 @@
+<ion-view title="{{doctor.firstname}} {{doctor.familyname}}" class="card-bg">
+
+  <ion-content has-header="true" padding="true">
+
+    <div class="list card">
+      <div class="item">
+        <h2>{{doctor.firstname}} {{doctor.familyname}}</h2>
+      </div>
+
+      <ion-item class="item-icon">
+        <i class="speciality-logo__icon {{ doctor.service.icon }}"></i> {{ doctor.service.value }}
+      </ion-item>
+
+    </div>
+
+  </ion-content>
+
+</ion-view>

@@ -10,7 +10,7 @@
     function specialityLogo() {
 
         return {
-            templateUrl: 'app/speciality/templates/logo.html',
+            templateUrl: 'app/speciality/templates/directives/logo.html',
             restrict: 'E',
             scope: {
                 label: "@label",

@@ -10,7 +10,7 @@
     function doctorItem() {
 
         return {
-            templateUrl: 'app/doctor/templates/item.html',
+            templateUrl: 'app/doctor/templates/directives/item.html',
             restrict: 'E',
             //scope: {
             //    sessions: '=',

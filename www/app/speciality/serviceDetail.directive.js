@@ -3,14 +3,14 @@
 
     angular
         .module('pcb.speciality')
-        .directive('specialityItem', specialityItem);
+        .directive('serviceDetail', serviceDetail);
 
-    specialityItem.$inject = [];
+    serviceDetail.$inject = [];
 
-    function specialityItem() {
+    function serviceDetail() {
 
         return {
-            templateUrl: 'app/speciality/templates/directives/item.html',
+            templateUrl: 'app/speciality/templates/directives/detail.html',
             restrict: 'E',
             //scope: {
             //    sessions: '=',
