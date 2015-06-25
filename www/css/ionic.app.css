@@ -7720,6 +7720,13 @@ a.button {
 .calendar .text-muted {
   color: #C0BCBC; }
 
+#map {
+  width: 100%;
+  height: 100%; }
+
+.scroll {
+  height: 100%; }
+
 /**
  * @file
  * Speciality Logo.

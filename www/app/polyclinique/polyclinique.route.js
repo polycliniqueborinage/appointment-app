@@ -53,6 +53,15 @@
                 }
             })
 
+            .state('tab.polyclinique-map', {
+                url: "/polyclinique/map",
+                views: {
+                    'tab-polyclinique': {
+                        templateUrl: "app/polyclinique/templates/map.html",
+                        controller: 'PolycliniqueMapController'
+                    }
+                }
+            })
 
 
 

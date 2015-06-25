@@ -13,7 +13,8 @@
         var config = {};
 
         var user = {
-            authenticate: authenticate
+            authenticate: authenticate,
+            logout: logout
         };
 
         return user;
@@ -27,6 +28,8 @@
             });
         };
 
+        function logout () {
+        };
     }
 
 })();

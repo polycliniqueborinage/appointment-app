@@ -17,7 +17,11 @@
 
   <script src="lib/ng-responsive-calendar/dist/js/calendar-tpls.js"></script>
 
+  <!-- locale -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.2.15/angular-locale_fr-be.js"></script>
+
+  <!-- google maps javascript -->
+  <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyB16sGmIekuGIvYOfNoW9T44377IU2d2Es&sensor=true"></script>
 
   <!-- ngCordova -->
   <!-- IMPORTANT : SHOULD be after ionic bundle and before cordova.js -->
@@ -30,6 +34,7 @@
 
   <script src="app/core/core.module.js"></script>
   <script src="app/core/core.dataservice.js"></script>
+  <script src="app/core/core.localstorage.js"></script>
   <script src="app/core/core.route.js"></script>
   <script src="app/core/core.constant.js"></script>
 
@@ -68,6 +73,7 @@
   <script src="app/polyclinique/polyclinique.controller.js"></script>
   <script src="app/polyclinique/polyclinique.service.controller.js"></script>
   <script src="app/polyclinique/polyclinique.doctor.controller.js"></script>
+  <script src="app/polyclinique/polyclinique.map.controller.js"></script>
 
   <script src="app/calendar/calendar.module.js"></script>
   <script src="app/calendar/calendar.service.js"></script>

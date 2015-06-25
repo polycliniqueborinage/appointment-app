@@ -5,9 +5,9 @@
         .module('pcb.core')
         .factory('Dataservice', Dataservice);
 
-    Dataservice.$inject = ['$http', '$q', 'API'];
+    Dataservice.$inject = ['$http', '$q', 'API', 'localstorage'];
 
-    function Dataservice($http, $q, API) {
+    function Dataservice($http, $q, API, localstorage) {
         var service = {
             get: getHttpRequest,
             post: postHttpRequest
@@ -27,7 +27,7 @@
                 .catch(httpRequestError);
         };
 
-        function getHttpRequest(apiURL, config) {
+        function getHttpRequest(apiURL, config, cache) {
             return $http.get(API.url + apiURL)
                 .then(httpRequestSuccess)
                 .catch(httpRequestError);

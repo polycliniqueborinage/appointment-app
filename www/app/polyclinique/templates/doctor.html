@@ -11,6 +11,19 @@
         <i class="speciality-logo__icon {{ doctor.service.icon }}"></i> {{ doctor.service.value }}
       </ion-item>
 
+      <ion-item class="item-icon">
+        <i class="ion-clock"></i> Horaires
+
+        <ion-item ng-repeat="(key, calendar) in calendars">
+          <div class="item item-divider">
+            {{ days[key] }}
+          </div>
+          <ion-item ng-repeat="hour in calendars[key]">
+            {{ hour.starttime | date:"H:mm"}} - {{ hour.endtime | date:"H:mm"}}
+          </ion-item>
+        </ion-item>
+      </ion-item>
+
     </div>
 
   </ion-content>
