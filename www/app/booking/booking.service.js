@@ -32,10 +32,12 @@
 
             return Dataservice.get(apiURL, config).then(function (data) {
                 data.forEach(function( value ) {
+                    var startTimeParts = value.start.date.match(/(\d{4})-(\d{2})-(\d{2})\s+(\d{2}):(\d{2})/);
+                    var endTimeParts = value.end.date.match(/(\d{4})-(\d{2})-(\d{2})\s+(\d{2}):(\d{2})/);
                     events.push({
                         title: 'Event',
-                        startTime: new Date(value.start.date),
-                        endTime: new Date(value.end.date),
+                        startTime: new Date(startTimeParts[1], startTimeParts[2]-1, startTimeParts[3], startTimeParts[4], startTimeParts[5], 0, 0),
+                        endTime: new Date(endTimeParts[1], endTimeParts[2]-1, endTimeParts[3], endTimeParts[4], endTimeParts[5], 0, 0),
                         allDay: false
                     });
                 });
@@ -49,10 +51,12 @@
             apiURL = '/doctors/' + id + '/bookings/' + date + '?interval=day';
             return Dataservice.get(apiURL, config).then(function (data) {
                 data.forEach(function( value ) {
+                    var startTimeParts = value.start.date.match(/(\d{4})-(\d{2})-(\d{2})\s+(\d{2}):(\d{2})/);
+                    var endTimeParts = value.end.date.match(/(\d{4})-(\d{2})-(\d{2})\s+(\d{2}):(\d{2})/);
                     events.push({
                         title: 'Event',
-                        startTime: new Date(value.start.date),
-                        endTime: new Date(value.end.date),
+                        startTime: new Date(startTimeParts[1], startTimeParts[2]-1, startTimeParts[3], startTimeParts[4], startTimeParts[5], 0, 0),
+                        endTime: new Date(endTimeParts[1], endTimeParts[2]-1, endTimeParts[3], endTimeParts[4], endTimeParts[5], 0, 0),
                         allDay: false
                     });
                 });

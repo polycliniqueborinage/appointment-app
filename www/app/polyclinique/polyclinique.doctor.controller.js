@@ -77,9 +77,12 @@
                     Calendar.getByDoctor($state.params.doctor).then(function (calendars) {
                         for (var calendar in calendars) {
                             for (var hour in calendars[calendar]) {
-                                calendars[calendar][hour].starttime = new Date(calendars[calendar][hour].start.date);
-                                calendars[calendar][hour].endtime = new Date(calendars[calendar][hour].end.date);
-                            }
+                                var dateParts = calendars[calendar][hour].start.date.match(/(\d{4})-(\d{2})-(\d{2})\s+(\d{2}):(\d{2})/);
+                                calendars[calendar][hour].start.jsdate = new Date(dateParts[1], dateParts[2], dateParts[3], dateParts[4], dateParts[5], 0, 0);
+
+                                var dateParts = calendars[calendar][hour].end.date.match(/(\d{4})-(\d{2})-(\d{2})\s+(\d{2}):(\d{2})/);
+                                calendars[calendar][hour].end.jsdate = new Date(dateParts[1], dateParts[2], dateParts[3], dateParts[4], dateParts[5], 0, 0);
+                           }
                         }
                         $scope.calendars = calendars;
                     });

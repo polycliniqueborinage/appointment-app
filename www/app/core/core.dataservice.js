@@ -22,6 +22,7 @@
 
         function postHttpRequest(apiURL, config) {
             $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
+            // var data = JSON.stringify(config);
             return $http.post(API.url + apiURL, config)
                 .then(httpRequestSuccess)
                 .catch(httpRequestError);

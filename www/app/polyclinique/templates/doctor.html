@@ -19,7 +19,7 @@
             {{ days[key] }}
           </div>
           <ion-item ng-repeat="hour in calendars[key]">
-            {{ hour.starttime | date:"H:mm"}} - {{ hour.endtime | date:"H:mm"}}
+            {{ hour.start.jsdate | date:"H:mm"}} - {{ hour.end.jsdate | date:"H:mm"}}
           </ion-item>
         </ion-item>
       </ion-item>

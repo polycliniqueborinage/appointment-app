@@ -16,6 +16,7 @@
 
             .state('tab.dashboard', {
                 url: "/dashboard",
+                parent: "tab",
                 views: {
                     'tab-dashboard': {
                         templateUrl: "app/dashboard/templates/main.html",

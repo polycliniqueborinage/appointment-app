@@ -18,7 +18,8 @@
                 url: "/polyclinique",
                 views: {
                     'tab-polyclinique': {
-                        templateUrl: "app/polyclinique/templates/main.html"
+                        templateUrl: "app/polyclinique/templates/main.html",
+                        controller: 'PolycliniqueController'
                     }
                 }
             })

@@ -7697,7 +7697,8 @@ a.button {
     width: 16.66667%; }
   .calendar .calendar-navbar .calendar-header {
     text-align: center;
-    padding-top: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     width: 66.66667%; }
   .calendar .calendar-navbar .nav-right {
     text-align: right;
@@ -7705,15 +7706,18 @@ a.button {
 .calendar .table-bordered {
   width: 100%;
   cursor: pointer; }
-.calendar .monthview-primary-with-event div {
-  width: 30px;
-  height: 30px;
-  margin: auto;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  border-radius: 50%;
-  line-height: 40px;
+  .calendar .table-bordered thead {
+    background-color: #383a3f;
+    color: white; }
+  .calendar .table-bordered tbody tr td {
+    padding: 7px; }
+.calendar .monthview-with-event {
   background-color: #7E9B95;
+  font-weight: bold;
+  color: white; }
+.calendar .monthview-with-event-selected {
+  background-color: #536662;
+  font-weight: bold;
   color: white; }
 .calendar .monthview-selected {
   font-weight: bold; }

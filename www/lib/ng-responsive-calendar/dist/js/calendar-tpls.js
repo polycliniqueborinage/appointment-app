@@ -942,13 +942,11 @@ angular.module("template/rcalendar/calendar.html", []).run(["$templateCache", fu
     "<div ng-switch=\"calendarMode\" class=\"calendar\">\n" +
     "    <div class=\"row calendar-navbar\">\n" +
     "        <div class=\"nav-left col-xs-2\">\n" +
-    "            <button type=\"button\" class=\"btn btn-default btn-sm\" ng-click=\"move(-1)\"><i\n" +
-    "                    class=\"glyphicon glyphicon-chevron-left\"></i></button>\n" +
+    "            <button type=\"button\" class=\"button button-icon button-clear ion-chevron-left\" ng-click=\"move(-1)\">" +
     "        </div>\n" +
     "        <div class=\"calendar-header col-xs-8\"><strong>{{title}}</strong></div>\n" +
     "        <div class=\"nav-right col-xs-2\">\n" +
-    "            <button type=\"button\" class=\"btn btn-default btn-sm\" ng-click=\"move(1)\"><i\n" +
-    "                    class=\"glyphicon glyphicon-chevron-right\"></i></button>\n" +
+    "            <button type=\"button\" class=\"button button-icon button-clear ion-chevron-right\" ng-click=\"move(1)\">" +
     "        </div>\n" +
     "    </div>\n" +
     "    <dayview ng-switch-when=\"day\"></dayview>\n" +
@@ -1022,7 +1020,7 @@ angular.module("template/rcalendar/month.html", []).run(["$templateCache", funct
     "                <small><em>{{ weekNumbers[$index] }}</em></small>\n" +
     "            </td>\n" +
     "            <td ng-repeat=\"dt in row track by dt.date\" class=\"monthview-dateCell\" ng-click=\"select(dt.date)\"\n" +
-    "                ng-class=\"{'text-center':true, 'monthview-current': dt.current&&!dt.selected&&!dt.hasEvent,'monthview-secondary-with-event': dt.secondary&&dt.hasEvent, 'monthview-primary-with-event':!dt.secondary&&dt.hasEvent, 'monthview-selected': dt.selected}\">\n" +
+    "                ng-class=\"{'text-center':true, 'monthview-current': dt.current&&!dt.selected&&!dt.hasEvent, 'monthview-with-event': !dt.secondary&&dt.hasEvent, 'monthview-with-event-selected':!dt.secondary&&dt.hasEvent&&dt.selected, 'monthview-selected': !dt.secondary&&!dt.hasEvent&&dt.selected}\">\n" +
     "                <div ng-class=\"{'text-muted':dt.secondary}\">\n" +
     "                    {{dt.label}}\n" +
     "                </div>\n" +

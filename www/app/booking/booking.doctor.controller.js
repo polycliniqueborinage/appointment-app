@@ -5,9 +5,9 @@
         .module('pcb.booking')
         .controller('BookingDoctorController', BookingDoctorController);
 
-    BookingDoctorController.$inject = ['$scope', '$state', 'Doctor'];
+    BookingDoctorController.$inject = ['$scope', '$state', 'loading', 'Doctor'];
 
-    function BookingDoctorController($scope, $state, Doctor) {
+    function BookingDoctorController($scope, $state, loading, Doctor) {
 
         $scope.doctors = [];
 
@@ -21,13 +21,17 @@
 
 
         function activate() {
+            loading.show();
+
             if ($state.params.speciality) {
                 Doctor.getBySpeciality($state.params.speciality).then(function (data) {
                     $scope.doctors = data;
+                    loading.hide();
                 });
             } else {
                 Doctor.getAll().then(function (data) {
                     $scope.doctors = data;
+                    loading.hide();
                 });
             }
         }

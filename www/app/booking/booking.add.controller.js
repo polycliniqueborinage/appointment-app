@@ -21,7 +21,6 @@
         function activate() {
             Doctor.get($state.params.doctor).then(function (data) {
                 $scope.doctor = data;
-                console.log($scope.doctor);
             });
             $scope.start = new Date($state.params.start)
             $scope.end = new Date($state.params.end)

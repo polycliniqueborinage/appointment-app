@@ -49,6 +49,23 @@ https://github.com/lynndylanhurley/ng-token-auth#authauthenticate
 ### Deployment
 http://alexbergin.com/2015/creating-publishing-hybrid-apps-ionic
 
+First, create a new account and pay 99$ at https://developer.apple.com/programs/ios/58
+1 certificate for development (this needs a Mac OS X computer)
+1 certificate for production (this needs a Mac OS X computer)
+1 app ID identifier (with a bundle ID wich will identify your app on xcode and other sites like facebook SDK
+1 provisioning profile for development
+1 provisioning profile for production
+on xCode, you can set the "team" of your app in the target general. After that, you can specify on target build settings and project build settings the provisioning profiles for production.
+
+Make sure you have the latest xcode version (5.1.1) because in the 5.1 there is a bug that not allows you to submit to the store throwing a stupid message on screen.
+
+Go to https://itunesconnect.apple.com58 and click on "manage your apps". There you'll find a ridiculous form asking you some things about your app.
+
+now, with your iphone unplugged, archive your app making Product > clean, product > clean build folder, product > archive
+
+if everything goes right, the archiver window should open. Select your "app" and validate it.
+It will make a previous validation and if everything is nice, you can send ut to apple for revision. Then you must wait a week for apple to reject your app because you've violated the localstorage guidelines and enabled icloud data backup.
+
 
 ### Manage cors issue with POST
 http://stackoverflow.com/questions/26818843/how-to-post-json-data-to-rest-webservice-in-angularjs

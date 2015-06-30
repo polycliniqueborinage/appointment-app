@@ -13,7 +13,8 @@
     }
     .calendar-header {
       text-align: center;
-      padding-top: 5px;
+      padding-top: 10px;
+      padding-bottom: 10px;
       width: 66.66666666666666%;
     }
     .nav-right {
@@ -27,9 +28,14 @@
     cursor: pointer;
 
     thead {
+      background-color: $grey_dark;
+      color: white;
 
       tr {
 
+        td{
+
+        }
       }
     }
 
@@ -37,20 +43,22 @@
 
       tr {
 
+        td{
+          padding: 7px;
+        }
       }
     }
   }
 
-
-  .monthview-primary-with-event div {
-    width: 30px;
-    height: 30px;
-    margin: auto;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    border-radius: 50%;
-    line-height: 40px;
+  .monthview-with-event {
     background-color: $green;
+    font-weight: bold;
+    color: white;
+  }
+
+  .monthview-with-event-selected {
+    background-color: $green_dark;
+    font-weight: bold;
     color: white;
   }
 
