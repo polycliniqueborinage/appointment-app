@@ -5,13 +5,20 @@
         .module('pcb.polyclinique')
         .controller('PolycliniqueMapController', PolycliniqueMapController);
 
-    PolycliniqueMapController.$inject = ['$scope', '$ionicLoading', '$compile'];
+    PolycliniqueMapController.$inject = ['$scope', '$ionicLoading', '$compile' ,'$log'];
 
-    function PolycliniqueMapController($scope, $ionicLoading, $compile) {
+    function PolycliniqueMapController($scope, $ionicLoading, $compile, $log) {
 
+        // Functions.
         $scope.centerOnMe = centerOnMe;
 
-        activate();
+        try {
+            activate();
+        }
+        catch(error) {
+            $log.error('Could not activate PolycliniqueMapController: ' + error.message);
+        }
+
         ////////////////////////////////////////////////////////////////////////
 
 
@@ -29,9 +36,11 @@
                 zoom: 16,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };
-            var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+            var map = new google.maps.Map(document.getElementById("map"),
+                mapOptions);
 
-            var contentString = "<div></div>";
+            //Marker + infowindow + angularjs compiled ng-click
+            var contentString = "<div>PolyClinique du Borinage</div>";
             var compiled = $compile(contentString)($scope);
 
             var infowindow = new google.maps.InfoWindow({
@@ -41,36 +50,34 @@
             var marker = new google.maps.Marker({
                 position: myLatlng,
                 map: map,
-                title: 'Polyclinique du Borinage'
+                title: 'PolyClinique du Borinage'
             });
 
             google.maps.event.addListener(marker, 'click', function() {
-                infowindow.open(map,marker);
+                infowindow.open(map, marker);
             });
 
             $scope.map = map;
         }
+
 
         function centerOnMe() {
             if(!$scope.map) {
                 return;
             }
 
-            $ionicLoading.show({
-                content: '<i class="icon ion-loading-c"></i>',
-                animation: 'fade-in',
-                showBackdrop: false,
-                maxWidth: 50,
-                showDelay: 0
+            $scope.loading = $ionicLoading.show({
+                content: 'Getting current location...',
+                showBackdrop: false
             });
 
             navigator.geolocation.getCurrentPosition(function(pos) {
                 $scope.map.setCenter(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
-                $ionicLoading.hide()
+                $scope.loading.hide();
             }, function(error) {
-                alert('Unable to get location: ' + error.message);
+                $log.error('Unable to get location: ' + error.message);
             });
-        }
+        };
+
     }
 })();
-

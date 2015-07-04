@@ -5,9 +5,11 @@
         .module('pcb.polyclinique')
         .controller('PolycliniqueController', PolycliniqueController);
 
-    PolycliniqueController.$inject = ['$scope', '$ionicTabsDelegate'];
+    PolycliniqueController.$inject = ['$scope', '$ionicTabsDelegate', '$log'];
 
-    function PolycliniqueController($scope, $ionicTabsDelegate) {
+    function PolycliniqueController($scope, $ionicTabsDelegate, $log) {
+
+        $scope.class = 'polyclinique';
 
         $scope.checkTab = function(){
             console.log('checkTab');
@@ -18,7 +20,7 @@
             else{
                 $ionicTabsDelegate.select(0);
             }
-        }
+        };
 
         activate();
         ////////////////////////////////////////////////////////////////////////
@@ -30,7 +32,8 @@
 
 
         function activate() {
-            var active = $ionicTabsDelegate.selectedIndex();
+            $log.debug('PolycliniqueController');
+            // var active = $ionicTabsDelegate.selectedIndex();
         }
     }
 

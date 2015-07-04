@@ -14,7 +14,10 @@
 
         var booking = {
             getAvailableSlotsByDay: getAvailableSlotsByDay,
-            getAvailableSlotsByMonth: getAvailableSlotsByMonth
+            getAvailableSlotsByMonth: getAvailableSlotsByMonth,
+            addSlot: addSlot,
+            deleteSlot: deleteSlot,
+            getSlot: getSlot
         };
 
         return booking;
@@ -25,6 +28,41 @@
 
 
 
+
+        function addSlot (user, doctor, start, end) {
+            apiURL = '/doctors/' + doctor.id + '/bookings/' + start.getFullYear() + '-' + ( start.getMonth() + 1 ) + '-' + start.getDate();
+
+            // Create a clone so we don't impact the original.
+            try {
+                var slot = new Object();
+                slot.firstname = user.firstname;
+                slot.lastname = user.lastname;
+                slot.birthdate = user.birthdate.toString();
+                slot.start = start.toString();
+                slot.end = end.toString();
+            }
+            catch(err) {
+            }
+
+            console.log(slot);
+            return Dataservice.post(apiURL, slot).then(function (data) {
+                return data;
+            });
+        };
+
+        function deleteSlot (id) {
+            apiURL = '/users/register';
+            return Dataservice.post(apiURL, config).then(function (data) {
+                return data;
+            });
+        };
+
+        function getSlot (id) {
+            apiURL = '/users/register';
+            return Dataservice.post(apiURL, config).then(function (data) {
+                return data;
+            });
+        };
 
         function getAvailableSlotsByMonth (id, date) {
             var events = [];

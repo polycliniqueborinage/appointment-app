@@ -2,3 +2,47 @@
  * @file
  * Fonts.
  */
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../css/fonts/montserrat.eot");
+  src: url("../css/fonts/montserrat.eot#iefix") format("embedded-opentype"),
+  url("../css/fonts/montserrat.ttf") format("truetype"),
+  url("../css/fonts/montserrat.woff") format("woff"),
+  url("../css/fonts/montserrat.svg#montserrat") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../css/fonts/montserrat-bold.eot");
+  src: url("../css/fonts/montserrat-bold.eot#iefix") format("embedded-opentype"),
+  url("../css/fonts/montserrat-bold.ttf") format("truetype"),
+  url("../css/fonts/montserrat-bold.woff") format("woff"),
+  url("../css/fonts/montserrat-bold.svg#montserrat") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Slab";
+  src: url("../css/fonts/roboto-slab.eot");
+  src: url("../css/fonts/roboto-slab.eot#iefix") format("embedded-opentype"),
+  url("../css/fonts/roboto-slab.ttf") format("truetype"),
+  url("../css/fonts/roboto-slab.woff") format("woff"),
+  url("../css/fonts/roboto-slab.svg#robotoslab") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Slab";
+  src: url("../css/fonts/roboto-slab-bold.eot");
+  src: url("../css/fonts/roboto-slab-bold.eot#iefix") format("embedded-opentype"),
+  url("../css/fonts/roboto-slab-bold.ttf") format("truetype"),
+  url("../css/fonts/roboto-slab-bold.woff") format("woff"),
+  url("../css/fonts/roboto-slab-bold.svg#robotoslab") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}

@@ -10,7 +10,9 @@
     function Speciality($q, $http, Dataservice) {
 
         var apiURL = '/specialities';
-        var config = {};
+        var config = {
+            'expiration':3600
+        };
 
         var speciality = {
             getAll: getAll

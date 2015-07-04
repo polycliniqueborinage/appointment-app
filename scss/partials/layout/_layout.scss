@@ -2,3 +2,22 @@
  * @file
  * Layout elements.
  */
+
+.dashboard {
+  .pane {
+    background-color: $green_light;
+  }
+}
+
+.polyclinique {
+  .pane {
+//    background-color: $green_light;
+  }
+}
+
+.booking {
+  .pane {
+//    background: url('../img/bg.jpg') no-repeat right fixed;
+//    background-size: cover;
+  }
+}

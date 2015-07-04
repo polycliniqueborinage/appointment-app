@@ -60,7 +60,8 @@
                         title: 'Signup Error',
                         template: err.message
                     });
-                });
+                }
+            );
         }
 
         function doLogin() {

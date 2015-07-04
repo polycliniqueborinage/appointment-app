@@ -4,7 +4,7 @@
 ```
    $ npm install
    $ bower update
-   $ cordova add ios
+   $ cordova platform add ios
    $ cordova plugin add org.apache.cordova.device
    $ cordova plugin add cordova-plugin-vibration
    $ cordova plugin add cordova-plugin-camera
@@ -23,7 +23,14 @@
    $ ionic serve
    $ ionic run
    $ ionic run ios -l -c -s
-   $ ionic build
+   $ ionic build ios
+   $ ionic prepare ios
+```
+
+## Deploy
+```
+   $ ionic build ios
+   $ ionic prepare ios
 ```
 
 ## Links
@@ -76,7 +83,6 @@ http://thejackalofjavascript.com/getting-started-with-ngcordova/
 
 ### push notification
 https://github.com/hollyschinsky/PushNotificationSample
-
 
 ### More resources
 https://github.com/Alexintosh/Awesome-Ionic

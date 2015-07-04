@@ -10,7 +10,9 @@
     function Doctor($q, $http, Dataservice) {
 
         var apiURL = '/doctors';
-        var config = {};
+        var config = {
+            'expiration':3600
+        };
 
         var doctor = {
             get: get,

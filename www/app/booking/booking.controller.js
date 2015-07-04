@@ -5,9 +5,11 @@
         .module('pcb.booking')
         .controller('BookingController', BookingController);
 
-    BookingController.$inject = ['$scope'];
+    BookingController.$inject = ['$scope', '$log'];
 
-    function BookingController($scope) {
+    function BookingController($scope, $log) {
+
+        $scope.class = 'booking';
 
         activate();
         ////////////////////////////////////////////////////////////////////////
@@ -19,7 +21,7 @@
 
 
         function activate() {
-            console.log('BookingController');
+            $log.debug('BookingController');
         }
     }
 

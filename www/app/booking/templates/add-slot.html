@@ -3,28 +3,29 @@
     <h2>{{doctor.familyname}} {{doctor.firstname}}</h2>
     <h3>{{start | date:'dd MMMM'}}</h3>
     <h4>{{start | date:'HH:mm'}} - {{end | date:'HH:mm'}}</h4>
-    <div class="list">
-      <label class="item item-input item-floating-label">
-        <span class="input-label">Prénom</span>
-        <input type="text" placeholder="Prénom">
-      </label>
-      <label class="item item-input item-floating-label">
-        <span class="input-label">Nom</span>
-        <input type="text" placeholder="Nom">
-      </label>
-      <label class="item item-input item-floating-label">
-        <span class="input-label">Date de naissance</span>
-        <input type="date" placeholder="Date de naissance">
-      </label>
-      <label class="item item-input item-floating-label">
-        <span class="input-label">Email</span>
-        <input type="email" placeholder="Email">
-      </label>
-      <label class="item item-input item-floating-label">
-        <span class="input-label">Téléphone</span>
-        <input type="tel" placeholder="Téléphone">
-      </label>
-      <button class="button button-block button-positive activated">Submit</button>
-    </div>
+
+    <form ng-submit="submit()">
+      <div class="list">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Nom</span>
+          <input type="text" placeholder="David" ng-model="user.firstname">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Prénom</span>
+          <input type="text" placeholder="Martin" ng-model="user.lastname">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Email</span>
+          <input type="email" placeholder="david-martin@gmail.com" ng-model="user.email">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Date de naissance</span>
+          <input type="date" placeholder="29/05/1978" ng-model="user.birthdate">
+        </label>
+      </div>
+      <div class="padding">
+        <button type="submit" class="button button-block">Enregistrer</button>
+      </div>
+    </form>
   </ion-content>
 </ion-view>
