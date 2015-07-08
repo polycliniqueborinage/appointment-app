@@ -16,6 +16,8 @@
          */
         'ionic',
         'ngCordova',
+        'ionic.service.core',
+        'ionic.service.push',
         'ui.rCalendar'
     ]);
 

@@ -37,6 +37,10 @@
 http://ngcordova.com/
 http://ionicframework.com/
 
+### Push Notification
+http://docs.ionic.io/v1.0/docs/push-from-scratch
+https://github.com/driftyco/ionic-push-tutorial-app
+
 ### Calendar
 http://twinssbc.github.io/AngularJS-ResponsiveCalendar/demo/
 
@@ -54,6 +58,9 @@ http://www.toptal.com/web/cookie-free-authentication-with-json-web-tokens-an-exa
 https://github.com/lynndylanhurley/ng-token-auth#authauthenticate
 
 ### Deployment
+
+https://developer.apple.com/account
+
 http://alexbergin.com/2015/creating-publishing-hybrid-apps-ionic
 
 First, create a new account and pay 99$ at https://developer.apple.com/programs/ios/58

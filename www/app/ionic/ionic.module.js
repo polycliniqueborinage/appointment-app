@@ -19,6 +19,17 @@
             });
         })
 
+        .config(['$ionicAppProvider', function($ionicAppProvider) {
+            // Identify app
+            $ionicAppProvider.identify({
+                // The App ID for the server
+                app_id: 'c32339f3',
+                // The API key all services will use for this app
+                api_key: '9944faa518d18995ee6126f1c903b9920002b02e5546239e'
+            });
+
+        }])
+
         .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             // Turn off caching for demo simplicity's sake
             // $ionicConfigProvider.views.maxCache(0);
